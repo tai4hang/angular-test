@@ -1,0 +1,20 @@
+<h2>crises</h2>
+<ul class="crises">
+  <li *ngFor="let crisis of crises$ | async"
+    [class.selected]="crisis.id === selectedId">
+    <a [routerLink]="['/crisis', crisis.id]">
+      <span class="badge">{{ crisis.id }}</span>{{ crisis.name }}
+    </a>
+  </li>
+</ul>
+
+<button routerLink="/sidekicks">Go to sidekicks</button>
+
+ <!-- <app-crisis-detail [crisis]="selectedCrisis"></app-crisis-detail> -->
+
+
+<!-- 
+Copyright 2017-2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
